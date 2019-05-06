@@ -1,0 +1,26 @@
+#ignore .metadata
+.metadata
+.DS_Store
+#ignore middle files
+build
+DerivedData
+*.xcuserstate
+project.xcworkspace
+xcuserdata
+UserInterfaceState.xcuserstate
+project.xcworkspace/
+xcuserdata/
+UserInterface.xcuserstate
+*/UserInterfaceState.xcuserstate
+*/Breakpoints_v2.xcbkptlisit
+
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
+#
+Pods/
+Podfile.lock
+*.xcworkspace
