@@ -7,6 +7,7 @@
 //
 
 #import "TRHome11ViewController.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface TRHome11ViewController ()
 
@@ -20,6 +21,7 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     [label setText:@"TRHome11ViewController"];
     [self.view addSubview:label];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     // Do any additional setup after loading the view.
 }
 

@@ -133,5 +133,11 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "MBProgressHUD"
   s.dependency "CocoaLumberjack"
+  #指定Pod为静态库模式
+  s.static_framework      = true
+  
+  s.xcconfig = {
+      "GCC_PREPROCESSOR_DEFINITIONS" => "RELEASE COCOAPODS=1"
+  }
 
 end

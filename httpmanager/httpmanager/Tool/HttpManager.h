@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
+//#import <CocoaLumberjack/DDLog.h>
+#include <CocoaLumberjack/DDLog.h>
+//#import <CocoaLumberjack/DDLegacyMacros.h>
 NS_ASSUME_NONNULL_BEGIN
+
 
 @interface HttpManager : NSObject
 

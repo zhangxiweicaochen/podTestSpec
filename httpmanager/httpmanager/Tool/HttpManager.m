@@ -7,12 +7,14 @@
 //
 
 #import "HttpManager.h"
-#import "DDLog.h"
+
+//static const DDLogLevel ddLogLevel = LOG_LEVEL_VERBOSE;
 
 @implementation HttpManager
 
 + (BOOL)isConnected {
     NSLog(@"------- isConnected");
+    [DDLog log:YES message:nil];
     return YES;
 }
 
