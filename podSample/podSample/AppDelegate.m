@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <httpmanager/HttpManager.h>
 
 @interface AppDelegate ()
 
@@ -18,11 +17,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    if ([HttpManager isConnected]) {
-        NSLog(@"is Connected");
-    } else {
-        NSLog(@"not connected");
-    }
+//    if ([HttpManager isConnected]) {
+//        NSLog(@"is Connected");
+//    } else {
+//        NSLog(@"not connected");
+//    }
 //    TestAgei *agei = [[TestAgei alloc]init];
 //    [agei printString];
 //    Test *test = [[Test alloc] init];

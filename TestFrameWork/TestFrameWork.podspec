@@ -15,9 +15,10 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "httpmanager"
+  s.name         = "TestFrameWork"
   s.version      = "0.0.1"
   s.summary      = "a easy to use http tool"
+  s.ios.deployment_target = '8.0'
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -26,7 +27,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = "a easy to use http tool"
 
-  s.homepage     = "https://github.com/agei/httpmanager"
+  s.homepage     = "https://github.com/agei/TestFrameWork"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -89,9 +90,11 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "httpmanager/Tool/*.{h,m}"
-  s.exclude_files = "httpmanager/*"
-  s.public_header_files = 'httpmanager/Tool/TRHTTPDefine.h'
+  s.source_files  = "Classes", "TestFrameWork/Tool/*.{h,m}"
+  s.exclude_files = "TestFrameWork/*"
+  s.public_header_files = 'TestFrameWork/Tool/*.{h}'
+  
+  s.requires_arc = true
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -137,14 +140,9 @@ Pod::Spec.new do |s|
   s.dependency "Masonry"
 
   #pod中的macro
-  s.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'MAS_SHORTHAND=1'}
+  s.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'MAS_SHORTHAND=1 MAS_SHORTHAND_GLOBALS=1'}
   #项目中的macro
-  s.user_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'MAS_SHORTHAND=1'}
-  
-  #pod中的macro
-  s.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'MAS_SHORTHAND_GLOBALS=1'}
-  #项目中的macro
-  s.user_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'MAS_SHORTHAND_GLOBALS=1'}
+  s.user_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'MAS_SHORTHAND=1 MAS_SHORTHAND_GLOBALS=1'}
   
   s.ios.frameworks = 'Foundation', 'UIKit'
   

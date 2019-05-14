@@ -7,12 +7,16 @@
 //
 
 #import "HttpManager.h"
+#import "HttpUtil.h"
 
-//static const DDLogLevel ddLogLevel = LOG_LEVEL_VERBOSE;
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 @implementation HttpManager
 
 + (BOOL)isConnected {
+    if (kTag111 == 1000) {
+        NSLog(@"------");
+    }
     NSLog(@"------- isConnected");
     [DDLog log:YES message:nil];
     return YES;

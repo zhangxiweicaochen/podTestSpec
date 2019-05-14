@@ -7,13 +7,14 @@ target 'podSample' do
 
   # Pods for podSample
 
-  pod 'httpmanager' , :path => '../httpmanager'
+  pod 'TestFrameWork' , :path => '../TestFrameWork'
   
   pod 'PodSwift' , :path => '../PodSwift'
   
   pod 'CircleMenu', :path => '../CircleMenu'
   
   pod 'MBProgressHUD'
+  pod 'HWAutoScrollView'
 
   target 'podSampleTests' do
     inherit! :search_paths

@@ -1,16 +1,18 @@
 //
-//  TRHome11ViewController.h
+//  HttpUtil.h
 //  httpmanager
 //
 //  Created by zhangxiwei on 2019/5/6.
 //  Copyright © 2019 zhangxiwei. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TRHome11ViewController : UIViewController
+#define kTag111 1000
+
+@interface HttpUtil : NSObject
 
 @end
 

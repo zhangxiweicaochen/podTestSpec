@@ -10,7 +10,11 @@
 #import "CircleMenu-Swift.h"
 #import "PodSwift/PodSwift-Swift.h"
 #import "MBProgressHUD.h"
-#import "TRHome11ViewController.h"
+#import "HttpManager.h"
+#import "TestDefineView.h"
+#import <Masonry/Masonry.h>
+//#import "TRHome11ViewController.h"
+
 
 @interface ViewController ()
 
@@ -25,6 +29,8 @@
     PodSwift *swift1 = [PodSwift sharedManager];
     NSString *str111 = [swift1 printSwift];
     NSLog(@"str111 = %@", str111);
+    
+    [HttpManager isConnected];
     
     PodView *view = [[PodView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     [self.view addSubview:view];
@@ -46,13 +52,22 @@
     [self.view addSubview:button];
     [button addTarget:self action:@selector(pushPage:) forControlEvents:UIControlEventTouchUpInside];
     
+    
+    
+    TestDefineView *defineView = [[TestDefineView alloc] init];
+    [self.view addSubview:defineView];
+    [defineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(410);
+        make.left.right.equalTo(0);
+    }];
+    
     // Do any additional setup after loading the view.
 }
 
 - (void)pushPage:(id)sender {
-    TRHome11ViewController *vc = [[TRHome11ViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    [self presentViewController:nav animated:YES completion:nil];
+//    TRHome11ViewController *vc = [[TRHome11ViewController alloc] init];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//    [self presentViewController:nav animated:YES completion:nil];
 }
 
 
